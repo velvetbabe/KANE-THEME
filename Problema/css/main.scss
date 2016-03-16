@@ -1,0 +1,517 @@
+@mixin date1 ($clr, $width ,$top ,$font){
+  color: $clr;
+  width: $width;
+  padding-top: $top;
+  font-size: $font;
+}
+@mixin date3 ($wid, $color1, $bordr, $mbottom, $mtop){
+  width:$wid;
+  color: $color1;
+  border:1px solid $color1;
+  margin-bottom: $mbottom;
+    margin-top: $mtop;
+}
+@mixin paleta-edit{
+width: 160px;
+height: 119px;
+display: inline-block;
+padding: 2%;
+
+}
+@mixin lorem($size,$color){
+font-size:$size;
+color:$color;
+}
+
+@mixin section{
+  color: $blanco;
+  padding: 5%;
+}
+@mixin team{
+  width: 50%;
+    background: url(../img/team/1.jpg);
+    height: 139px;
+    margin: 0 auto;
+    background-position-y: -16px;
+    background-position-x: -31px;
+}
+@mixin listas{
+  padding: 3%;
+  margin: 5%;
+}
+@mixin formulario{
+  width: 80%;
+  margin: 0 auto 1%;
+  height: 52px;
+}
+
+$bg-color:#27AD60;
+$dark-blue:#2C3E50;
+$verde: #27AD60;
+$blanco: #fff;
+$casib: #C8EAD7;
+$negro: #000;
+$marron: #A96931;
+$azul: #2C3E50;
+$verde0: #2A7257;
+$verdeclaro: #8FB9A1;
+$gray: #494349;
+$gris: #443E43;
+
+
+
+
+#header{
+  .navbar-inverse{
+   background-color:#27AD60;
+   background-size:cover;
+   }
+   .navbar-collapse{
+    padding:3%;
+    }
+}
+
+
+.bg{
+background-image:url(../img/carousel-bg.jpg);
+background-position-y:-164px; 
+background-repeat:no-repeat;
+width:100%;
+height:500px;
+padding:6%;
+  h1{
+  	color:white;
+  	text-transform:uppercase;
+  	font-size:66px;
+  	font-weight:300;
+  }
+  p{
+  	color:white;
+  	font-size:29px;
+  	font-weight:300;
+  }
+}
+
+.about-us{
+background-color:$dark-blue;
+width:100%;
+height:500%;
+padding-bottom:8%;
+  h1{
+  color:white;
+  text-transform:uppercase;
+  font-size:65px;
+  padding-top:10%;
+  font-weight:300;
+  }
+  .line{
+   width:20%;
+   padding-bottom:4%;
+  }
+  .lorem{
+   @include lorem (15px,white);
+  }
+  .lorem2{
+   @include lorem (15px,white);
+   padding-bottom:4%;
+  }
+  .sepia{
+   width: 82%;
+   height: 370px;
+   padding-left:8%;
+   padding-top:1%;
+  }
+}
+
+.green-bg{
+ background-color:$bg-color;
+ width:100%;
+ height:700px;
+ padding:5%;
+}
+
+.paleta{
+ background-color:white;
+ width:100%;
+ height:900%;
+ padding:19%;
+ padding-top:8%;
+ padding-bottom:3%;
+ .paleta-boxes{
+ text-align:center;
+ right:19%;
+ padding-top:1.5%;
+ }
+ h1{
+ text-transform:uppercase;
+ font-size:60px;
+ }
+ hr{
+ color:black;
+ border:0.3px solid black;
+ width:20%;
+ }
+
+ .color-pick {
+ @include paleta-edit; 
+ padding:1%;
+ margin-left: -1%;
+ }
+ .uno{
+  background-color:#69D2E7;
+ }
+ .dos{
+  background-color:#A7DBDB;
+ }
+ .tres{
+  background-color:#E0E4CC;
+ }
+ .cuatro{
+  background-color:#F38630;
+ }
+ .cinco{
+  background-color:#FA6900;
+ }
+ .seis{
+  background-color:#E94C6F;
+ }
+ .siete{
+  background-color:#542733
+ }
+ .ocho{
+  background-color:#5A6A62;
+ }
+ .nueve{
+  background-color:#C6D5CD;
+ }
+ .diez{
+  background-color:#FDF200;
+ }
+ .once{
+  background-color:#DB3340;
+ }
+ .doce{
+  background-color:#E8B71A;
+ }
+ .trece{
+  background-color:#F7EAC8;
+ }
+ .catorce{
+  background-color:#1FDA9A;
+ }
+ .quince{
+  background-color:#28ABE3;
+ }
+ .dieciseis{
+  background-color:#588C73;
+ }
+ .diecisiete{
+  background-color:#F2E394;
+ }
+ .dieciocho{
+  background-color:#F2AE72;
+ }
+ .diecinueve{
+  background-color:#D96459;
+ }
+ .veinte{
+  background-color:#8C4646;
+ }
+ .veintiuno{
+  background-color:#D0C91F;
+ }
+ .veintidos{
+  background-color:#85C4B9;
+ }
+ .veintitres{
+  background-color:#008BBA;
+ }
+ .veinticuatro{
+  background-color:#DF514C;
+ }
+ .veinticinco{
+  background-color:#DC403B;
+ }
+}
+.about{
+    background: #2C3E50;
+    margin-top: 1%;
+    box-shadow:         0px -3px 19px 0px rgba(50, 50, 53, 0.79);
+    padding: 9%;
+    h2{
+      @include date1 (white, 100%, 0% , 4em);
+      text-align: center;
+    }
+    hr{
+      @include date3 (15%,white, 1px solid , 4%, 2%)
+    }
+    .barras{
+      .backbarras{
+        background: white;
+        padding: 2px;
+        height: 14px;
+        .progress-bar{
+          width: 100%;
+          height: 10px;
+        }
+      }
+    }
+    .imagen{
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+#wedo{
+  @include section;
+  background-color: $verde;
+  h1{
+    @include date1 (white, 100%, 0% , 4em);
+  }
+  hr{
+    @include date3 (15%,white, 1px solid , 4%, 2%)
+  }
+  .icon-content{
+    margin-top: 4%;
+  }
+  .iconos{
+    padding: 5%;
+      width: 71%;
+      margin: 0 auto;
+    p{
+      color: $verdeclaro;
+    }
+    &:hover p{
+      color: $blanco;
+    }
+    &:hover h3{
+      border-bottom: solid 1px $blanco;
+      color: $marron;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    &:hover .icon{
+        transform:rotate(45deg);
+        background: none;
+        background-color: $marron;
+        padding: 3%;
+      }
+    &:hover{
+      background-color: $verde0;
+    }
+  }
+  .icon{
+    background: url(../img/icon-bg.png);
+    background-size: cover;
+    background-color: #2C3E50;
+    width: 50%;
+      margin: 0 auto;
+      padding: 2%;
+      margin-bottom: 5%;
+  }
+  .icon img{
+    margin: 0 auto;
+  }
+  .btn{
+    padding: 1%;
+    background-color: $gray;
+    margin-bottom: 9%;
+    &:hover{
+      border:2px solid $gray;
+      color: $gray;
+      background-color: transparent;
+      font-weight: bold;
+    }
+  }
+  .team{
+    margin-top: 4%;
+    margin-bottom: 10%;
+    .image{
+      @include team;
+    }
+    h5{
+      border-bottom: dashed 0.5px #65A078; 
+    }
+    p{
+      width: 75%;
+      margin: 0 auto;
+      font-size: 14px;
+      color: $verdeclaro;
+    }
+    .caja{
+      margin: 3%;
+      a{
+      font-size: 24px;
+        margin: 3px;
+        color: $verdeclaro;
+        &:hover i{
+          color: $azul;
+            }
+      }
+    }
+  }
+}
+#price{
+  @include section;
+  background-color:$azul;
+  h1{
+    @include date1 (white, 100%, 0% , 4em);
+  } 
+  hr{
+    @include date3 (15%,white, 1px solid , 4%, 2%)
+  }
+  .precios{
+    border: 1px solid $verde;
+    margin: 1%;
+    width: 22%;
+    padding: 0;
+    margin-bottom: 6%;
+    margin-top: 8%;
+    &:hover{
+      transform:translateY(-100px);
+      border: solid 3px $marron;
+    }
+    ul{
+      padding: 0;
+    }
+  }
+  .marron{
+    background-color: $marron;
+  }
+  .categorias{
+    h4{
+      font-size: 20px;
+        font-weight: lighter;
+        margin: 0;
+        padding: 9%;
+    }
+  }
+  .price{
+    background-color: $verde;
+    padding: 5%;
+    span{
+      font-size: 34px;
+    }
+  }
+  .descripcion{
+    li{
+      @include listas;
+    }
+    .marron{
+      background-color: $marron;
+      margin: 0;
+      padding: 8%;
+    }
+    .par{
+      background-color: $blanco;
+      color: $azul;
+        margin: 0;
+        padding: 6%;
+    }
+    .boton{
+      margin: 15%;
+      a{
+      padding: 7%;
+      background-color: $gris;
+      font-size: 20px;
+      &:hover{
+        background: transparent;
+        border: 2px solid $blanco;
+        color: $blanco;
+        font-weight: bold;
+        }
+      }
+    }
+  }
+  .testimonio{
+    margin-top: 5%;
+    p{
+      font-style: italic;
+        font-size: 17px;
+    }
+    footer{
+      color: orange;
+    }
+  }
+}
+#touch{
+  @include section;
+  background-color: $azul;
+  h1{
+    @include date1 (white, 100%, 0% , 4em);
+  }
+  hr{
+    @include date3 (15%,white, 1px solid , 4%, 2%)
+  }
+  .formulario{
+    margin-top: 4%;
+    input{
+      @include formulario;
+    }
+    textarea{
+      @include formulario;
+      height: 120px;
+      margin-bottom: 5%;
+    }
+    a{
+      padding: 1% 3% 1% 3%;
+    }
+  }
+
+}
+#redes{
+  background: url(../img/img-divider-img.jpg);
+  background-size: cover;
+  height: 400px;
+  background-attachment: fixed;
+  a{
+    margin: 1%;
+    &:hover{
+      color: $verde;
+    }
+    i{
+    margin-top: 10%;
+    font-size: 120px;
+    }
+  }
+}
+#footer{
+  @include section;
+  background-color: $verde;
+  hr{
+    @include date3 (15%,white, 1px solid , 4%, 2%)
+  }
+  ul{
+    text-align-last: left;
+      margin-left: 16%;
+      li{
+        margin-bottom: 3%;
+        i{
+          margin-right: 2%;
+        }
+      }
+  }
+  .buscador{
+    .input-group-lg{
+      margin-bottom: 5%;
+    }
+    .input-group-addon{
+      font-size: 17px;
+      line-height: 0;
+      i{
+        color: $blanco;
+      }
+    }
+    a{
+      padding: 3%;
+    }
+  }
+  p{
+    color: gray;
+    a{
+      margin-left: 1%;
+    }
+  }
+}
+
